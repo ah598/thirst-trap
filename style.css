@@ -2,7 +2,7 @@
 :root {
     --custom-primary: #4a6868;
     --custom-secondary: #9b6763;
-    --custom-bg: #f5f5f5;
+    --custom-bg: #ffffff;
     --custom-card-bg: #ffffff;
     --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
     --shadow-lg: 0 2px 15px rgba(0,0,0,0.08);
@@ -17,6 +17,7 @@ body {
 
 /* Header Styles */
 header {
+    background-color: #f6f1ee; 
     padding: 0.5rem 0;
     margin-bottom: -1rem;
 }
@@ -58,6 +59,42 @@ li {
 h3{
     text-align: center;
     font-weight: 600;
+}
+
+
+/* Navigation Styles */
+.navbar {
+    padding: 1rem 0;
+    margin-bottom: -1rem;
+    background-color:#f6f1ee ;
+}
+
+.nav-link {
+    color: var(--custom-primary) !important;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    border: 2px solid var(--custom-primary);
+}
+
+.nav-link:hover {
+    color: white !important;
+    background-color: var(--custom-primary);
+}
+
+/* Active state for current page */
+.nav-link.active {
+    color: white !important;
+    background-color: var(--custom-primary) !important;
+    border-color: var(--custom-primary);
+}
+
+.nav-link.active:hover {
+    color: white !important;
+    background-color: var(--custom-primary) !important;
+    border-color: var(--custom-primary);
 }
 
 /* Filter Section */
@@ -193,6 +230,8 @@ h3{
 }
 
 .form-check-label {
+    font-size: 1rem;
+    font-weight: 400;
     padding-left: 0.25rem;
 }
 
@@ -303,38 +342,4 @@ h3{
     transform: scale(1.2);
 }
 
-/* Navigation Styles */
-.navbar {
-    padding: 1rem 0;
-    margin-bottom: -1rem;
-    background-color: transparent;
-}
-
-.nav-link {
-    color: var(--custom-primary) !important;
-    font-weight: 500;
-    padding: 0.5rem 1.5rem;
-    margin: 0 0.5rem;
-    transition: all 0.3s ease;
-    border-radius: 25px;
-    border: 2px solid var(--custom-primary);
-}
-
-.nav-link:hover {
-    color: white !important;
-    background-color: var(--custom-primary);
-}
-
-/* Active state for current page */
-.nav-link.active {
-    color: white !important;
-    background-color: var(--custom-primary) !important;
-    border-color: var(--custom-primary);
-}
-
-.nav-link.active:hover {
-    color: white !important;
-    background-color: var(--custom-primary) !important;
-    border-color: var(--custom-primary);
-}
 

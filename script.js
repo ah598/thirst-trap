@@ -144,7 +144,71 @@ const barsData = [
         },
         days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     },
-
+    {
+        name: "Crossroads Cafe",
+        location: "Central",
+        address: "320 Orchard Rd, Singapore Marriott Tang Plaza Hotel, Singapore 238865",
+        happyHourStart: "11:00",
+        happyHourEnd: "20:00",
+        drinks: ["wines", "beers", "spirits"], 
+        priceRange: {
+            min: 13,
+            max: 13
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday"]
+    },
+    {
+        name: "THE STORE SG",
+        location: "Central",
+        address: "11 Neil Road, Singapore 088809",
+        happyHourStart: "16:00",
+        happyHourEnd: "18:00",
+        drinks: ["cocktails"], 
+        priceRange: {
+            min: 11,
+            max: 11
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday"]
+    },
+    {
+        name: "Brasserie Astoria",
+        location: "Central",
+        address: "11 Empress Place, Singapore 179558",
+        happyHourStart: "15:00",
+        happyHourEnd: "18:00",
+        drinks: ["cocktails", "beers"], 
+        priceRange: {
+            min: 7,
+            max: 12
+        },
+        days: ["Friday", "Saturday"]
+    },
+    {
+        name: "Employees Only",
+        location: "Central",
+        address: "112 Amoy St, Singapore 069932",
+        happyHourStart: "17:00",
+        happyHourEnd: "19:00",
+        drinks: ["spirits"], 
+        priceRange: {
+            min: 10,
+            max: 10
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    },
+    {
+        name: "Druggists",
+        location: "Central",
+        address: "119 Tyrwhitt Rd, Singapore 207547",
+        happyHourStart: "16:00",
+        happyHourEnd: "19:00",
+        drinks: ["beers"], 
+        priceRange: {
+            min: 12,
+            max: 12
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday"]
+    },
 ];
 
 // Display Function
