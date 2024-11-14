@@ -268,10 +268,27 @@ const barsData = [
     },
 ];
 
-// Display Function
+// Display Function with enhanced card design and clickable links
 function displayBars(bars) {
     const barsContainer = document.getElementById('bars');
     barsContainer.innerHTML = '';
+
+    if (bars.length === 0) {
+        // Create a message for no results
+        const noResultsElement = document.createElement('div');
+        noResultsElement.className = 'col-12 text-center py-5';
+        noResultsElement.innerHTML = `
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="mb-3"><i class="bi bi-emoji-frown"></i></h4>
+                    <h4 class="card-title">Sorry, no such Thirst Trap was found...</h4>
+                    <p class="card-text">Try adjusting your filters to see more results.</p>
+                </div>
+            </div>
+        `;
+        barsContainer.appendChild(noResultsElement);
+        return;
+    }
 
     bars.forEach(bar => {
         const barElement = document.createElement('div');
@@ -279,7 +296,12 @@ function displayBars(bars) {
         barElement.innerHTML = `
             <div class="card h-100">
                 <div class="card-body">
-                    <h4 class="card-title mb-3">${bar.name}</h4>
+                    <h4 class="card-title mb-3">
+                        <a href="${bar.url}" 
+                           target="_blank" 
+                           class="bar-link" 
+                           rel="noopener noreferrer">${bar.name}</a>
+                    </h4>
                     <ul class="list-unstyled">
                         <li class="mb-2">
                             <i class="bi bi-geo-alt me-2"></i>

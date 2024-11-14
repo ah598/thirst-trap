@@ -1,11 +1,13 @@
 /* Variables */
 :root {
     --custom-primary: #4a6868;
-    --custom-secondary: #9b6763;
-    --custom-bg: #ffffff;
-    --custom-card-bg: #ffffff;
+    --custom-secondary: #9b8063;
+    --custom-bg: #f5f2eb;        /* Beige background */
+    --custom-card-bg: #ffffff;   /* White cards */
     --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
     --shadow-lg: 0 2px 15px rgba(0,0,0,0.08);
+    --hover-bg: #fffbf4;   
+    --texture-overlay: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");     
 }
 
 /* Base Styles */
@@ -13,6 +15,19 @@ body {
     font-family: 'Forum', serif;
     font-size: 1.05rem;
     background-color: var(--custom-bg);
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--texture-overlay);
+    pointer-events: none;
+    z-index: -1;
 }
 
 /* Header Styles */
@@ -51,15 +66,37 @@ header h1.display-4 {
     margin-left: 5rem;
 }
 
-li {
-    text-align: justify;
-}
-
-h3{
-    text-align: center;
+/* Bar Link Styles */
+.bar-link {
+    color: var(--custom-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    font-family: 'Forum', serif;
+    font-size: 1.4rem;
     font-weight: 600;
+    padding-right: 1.5rem;
 }
 
+.bar-link:hover {
+    color: var(--custom-secondary);
+}
+
+.bar-link::after {
+    content: '↗';
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.bar-link:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 /* Navigation Styles */
 .navbar {
@@ -82,14 +119,7 @@ h3{
     background-color: var(--custom-primary);
 }
 
-/* Active state for current page */
 .nav-link.active {
-    color: white !important;
-    background-color: var(--custom-primary) !important;
-    border-color: var(--custom-primary);
-}
-
-.nav-link.active:hover {
     color: white !important;
     background-color: var(--custom-primary) !important;
     border-color: var(--custom-primary);
@@ -125,12 +155,51 @@ h3{
 
 .form-select:focus {
     border-color: var(--custom-primary);
-    box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(74, 104, 104, 0.25);
 }
 
 .form-check-input:checked {
     background-color: var(--custom-primary);
     border-color: var(--custom-primary);
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--custom-card-bg);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--custom-secondary);
+    box-shadow: var(--shadow-lg);
+    background-color: var(--hover-bg);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card ul li {
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.card i {
+    color: var(--custom-primary);
+    transition: all 0.3s ease;
+}
+
+.card:hover i {
+    transform: scale(1.2);
+    color: var(--custom-secondary);
+}
+
+.card strong {
+    color: var(--custom-primary);
+    font-weight: 600;
 }
 
 /* Price Range Slider */
@@ -338,4 +407,58 @@ h3{
     .range-values {
         font-size: 0.8rem;
     }
+}
+
+/* About page specific styles */
+.about-page .card {
+    border: none;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+    background-color: var(--custom-card-bg);
+}
+
+.about-page .card:hover {
+    transform: translateY(-5px);
+    background-color: var(--hover-bg);
+}
+
+.about-page .card-title {
+    color: var(--custom-primary);
+    font-family: 'Forum', serif;
+    font-weight: 600;
+}
+
+.about-page ul li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Link styles */
+.about-page a {
+    color: var(--custom-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.about-page a:hover {
+    color: var(--custom-secondary);
+}
+
+.about-page a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--custom-secondary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.about-page a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
