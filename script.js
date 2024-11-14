@@ -25,7 +25,8 @@ const barsData = [
             min: 11,
             max: 14
         },
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://lazylizard.com.sg/"
     },
     {
         name: "Chico Loco",
@@ -38,7 +39,8 @@ const barsData = [
             min: 9,
             max: 10
         },
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday"]
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        url: "https://super-loco.com/chicoloco", 
     },
     {
         name: "Offtrack",
@@ -51,7 +53,8 @@ const barsData = [
             min: 12,
             max: 16
         },
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], 
+        url: "https://www.offtrack.sg/",
     },
     {
         name: "Southbridge",
@@ -64,7 +67,8 @@ const barsData = [
             min: 10,
             max: 24
         },
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday"]
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        url: "https://www.southbridge.sg/", 
     },
     {
         name: "Bones 'n Barrels",
@@ -77,7 +81,8 @@ const barsData = [
             min: 5,
             max: 8
         },
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        url: "https://www.bonesnbarrels.com/index.html", 
     },
     {
         name: "Malthouse",
@@ -90,7 +95,8 @@ const barsData = [
             min: 10,
             max: 15
         },
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.malthouse.sg/", 
     },
     {
         name: "Almost Famous",
@@ -103,7 +109,8 @@ const barsData = [
             min: 10,
             max: 15
         },
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        url: "https://almostfamous.sg/",
     },
     {
         name: "Lucha Loco",
@@ -116,7 +123,8 @@ const barsData = [
             min: 9,
             max: 10
         },
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        url: "https://super-loco.com/luchaloco",
     },
     {
         name: "The Queen and Mangosteen",
@@ -129,7 +137,8 @@ const barsData = [
             min: 11,
             max: 13
         },
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], 
+        url: "https://queenandmangosteen.com/",
     },
     {
         name: "BERLIN BAR",
@@ -142,7 +151,8 @@ const barsData = [
             min: 10,
             max: 15
         },
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.google.com/maps/place/BERLIN+BAR/@1.3272324,103.7543397,15z/data=!4m6!3m5!1s0x31da11daff2a7377:0x7fc91ed0b90395d5!8m2!3d1.3272324!4d103.7543397!16s%2Fg%2F11vcn9vn9z?entry=ttu&g_ep=EgoyMDI0MTExMS4wIKXMDSoASAFQAw%3D%3D",
     },
     {
         name: "Crossroads Cafe",
@@ -155,7 +165,8 @@ const barsData = [
             min: 13,
             max: 13
         },
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday"]
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        url: "https://www.crossroadssg.com/our-menus",
     },
     {
         name: "THE STORE SG",
@@ -168,7 +179,8 @@ const barsData = [
             min: 11,
             max: 11
         },
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday"]
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        url: "https://www.thestoresg.com/",
     },
     {
         name: "Brasserie Astoria",
@@ -181,7 +193,8 @@ const barsData = [
             min: 7,
             max: 12
         },
-        days: ["Friday", "Saturday"]
+        days: ["Friday", "Saturday"],
+        url: "https://www.brasserieastoria.sg/",
     },
     {
         name: "Employees Only",
@@ -194,7 +207,8 @@ const barsData = [
             min: 10,
             max: 10
         },
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        url: "http://m.employeesonlysg.com/welcome",
     },
     {
         name: "Druggists",
@@ -207,7 +221,50 @@ const barsData = [
             min: 12,
             max: 12
         },
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday"]
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday"], 
+        url: "https://www.druggists.sg/", 
+    },
+    {
+        name: "Fatboy's the Burger Bar",
+        location: "North",
+        address: "187 Upper Thomson Rd, Singapore 574335",
+        happyHourStart: "12:00",
+        happyHourEnd: "23:00",
+        drinks: ["beers"], 
+        priceRange: {
+            min: 10,
+            max: 10
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.fatboys.sg/",
+    },
+    {
+        name: "Zenryoku Izakaya",
+        location: "North",
+        address: "183 Upper Thomson Rd, #01-04, Singapore 574429",
+        happyHourStart: "16:00",
+        happyHourEnd: "19:00",
+        drinks: ["beers", "spirits"], 
+        priceRange: {
+            min: 5,
+            max: 10
+        },
+        days: ["Tuesday", "Wednesday", "Thursday"],
+        url: "https://zenryoku.sg/", 
+    },
+    {
+        name: "Beer Basket @ Kovan",
+        location: "North",
+        address: "1010 Upper Serangoon Rd, Singapore 534748",
+        happyHourStart: "16:30",
+        happyHourEnd: "19:00",
+        drinks: ["beers", "wines"], 
+        priceRange: {
+            min: 11,
+            max: 17
+        },
+        days: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        url: "https://beerbasket.sg/", 
     },
 ];
 
