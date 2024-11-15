@@ -266,6 +266,91 @@ const barsData = [
         days: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         url: "https://beerbasket.sg/", 
     },
+    {
+        name: "Tachinomiya",
+        location: "North",
+        address: "211 Hougang Street 21, #01-285, Singapore 530211",
+        happyHourStart: "17:00",
+        happyHourEnd: "19:00",
+        drinks: ["beers", "sakes", "cocktails"], 
+        priceRange: {
+            min: 8,
+            max: 15
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.tachinomiya.com.sg/", 
+    },
+    {
+        name: "The Secret Mermaid",
+        location: "Central",
+        address: "10 Collyer Quay, B1-09 Ocean Financial Centre, Singapore 049315",
+        happyHourStart: "16:30",
+        happyHourEnd: "18:30",
+        drinks: ["cocktails", "wines"], 
+        priceRange: {
+            min: 12,
+            max: 15
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        url: "https://www.thesecretmermaid.com/", 
+    },
+    {
+        name: "Gibson",
+        location: "Central",
+        address: "20 Bukit Pasoh Rd, 2nd floor, Singapore 089834",
+        happyHourStart: "18:00",
+        happyHourEnd: "20:00",
+        drinks: ["cocktails", "beers", "wines"], 
+        priceRange: {
+            min: 10,
+            max: 16
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.gibsonbar.sg/", 
+    },
+    {
+        name: "Live Twice",
+        location: "Central",
+        address: "18-20 Bukit Pasoh Rd, 1st floor, Singapore 089834",
+        happyHourStart: "18:00",
+        happyHourEnd: "20:00",
+        drinks: ["cocktails", "beers", "wines"], 
+        priceRange: {
+            min: 12,
+            max: 16
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.livetwice.sg/", 
+    },
+    {
+        name: "Jigger & Pony",
+        location: "Central",
+        address: "165 Tanjong Pagar Road, 1st floor, Amara Hotel, Singapore 088538",
+        happyHourStart: "18:00",
+        happyHourEnd: "19:30",
+        drinks: ["cocktails", "beers", "wines"], 
+        priceRange: {
+            min: 12,
+            max: 19
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.jiggerandpony.com/", 
+    },
+    {
+        name: "Wala Wala",
+        location: "West",
+        address: "31 Lorong Mambong, Singapore 277689",
+        happyHourStart: "16:00",
+        happyHourEnd: "19:00",
+        drinks: ["beers", "wines"], 
+        priceRange: {
+            min: 11,
+            max: 11
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday", "Sunday"],
+        url: "https://www.walawala.sg/", 
+    },
+    
 ];
 
 // Display Function with enhanced card design and clickable links
@@ -293,6 +378,12 @@ function displayBars(bars) {
     bars.forEach(bar => {
         const barElement = document.createElement('div');
         barElement.className = 'col';
+        
+        // Format price range display
+        const priceDisplay = bar.priceRange.min === bar.priceRange.max 
+            ? `$${bar.priceRange.min}` 
+            : `$${bar.priceRange.min} - $${bar.priceRange.max}`;
+
         barElement.innerHTML = `
             <div class="card h-100">
                 <div class="card-body">
@@ -325,7 +416,7 @@ function displayBars(bars) {
                         </li>
                         <li>
                             <i class="bi bi-tag me-2"></i>
-                            <strong>Price Range:</strong> $${bar.priceRange.min} - $${bar.priceRange.max}
+                            <strong>Estimated Price:</strong> ${priceDisplay}
                         </li>
                     </ul>
                 </div>
