@@ -93,7 +93,7 @@ const barsData = [
     {
         name: "Malthouse",
         location: "East",
-        address: "685 E Coast Rd, Singapore 459054",
+        address: "685 East Coast Rd, Singapore 459054",
         happyHourStart: "12:00",
         happyHourEnd: "20:00",
         drinks: ["beers"],
@@ -148,7 +148,7 @@ const barsData = [
     },
     {
         name: "BERLIN BAR",
-        location: "West",
+        location: "South",
         address: "1 HarbourFront Walk, #01-106/107 VivoCity, Singapore 098585",
         happyHourStart: "16:00",
         happyHourEnd: "20:00",
@@ -387,7 +387,7 @@ const barsData = [
     {
         name: "Tango's Restaurant & Wine Bar",
         location: "West",
-        address: "35 Lorong Mambong, Holland Village, Singapore, SGingapore 277692",
+        address: "35 Lorong Mambong, Holland Village, Singapore, Singapore 277692",
         happyHourStart: "15:00",
         happyHourEnd: "21:00",
         drinks: ["beers", "wines","spirits", "cocktails"], 
@@ -484,7 +484,7 @@ const barsData = [
     },
     {
         name: "Back St. Alley",
-        location: "South",
+        location: "West",
         address: "31 Biopolis Way, #01-06, Singapore 138669",
         happyHourStart: "16:30",
         happyHourEnd: "20:00",
@@ -498,7 +498,7 @@ const barsData = [
     },
     {
         name: "Ob.bar",
-        location: "South",
+        location: "West",
         address: "9 N Buona Vista Dr, #01-04 The Metropolis, Singapore 138588",
         happyHourStart: "16:00",
         happyHourEnd: "18:00",
@@ -510,6 +510,91 @@ const barsData = [
         days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         url: "https://obbar.social/", 
     },
+    {
+        name: "Brewerkz Seletar Aerospace Park",
+        location: "North",
+        address: "9 The Oval, Seletar Aerospace Park, Singapore 797867",
+        happyHourStart: "15:00",
+        happyHourEnd: "20:00",
+        drinks: ["beers"], 
+        priceRange: {
+            min: 13.60,
+            max: 17
+        },
+        days: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://brewerkz.com/outlet/seletar-aerospace-park/", 
+    },
+    {
+        name: "YOUNGS Restaurant & Bar",
+        location: "North",
+        address: "3 Hyde Park Gate, Seletar Aerospace Park, Singapore 799531",
+        happyHourStart: "16:00",
+        happyHourEnd: "20:00",
+        drinks: ["beers"], 
+        priceRange: {
+            min: 10,
+            max: 12
+        },
+        days: ["Monday", "Wednesday", "Thursday"],
+        url: "https://youngs.com.sg/", 
+    },
+    {
+        name: "The Carpenters Bar",
+        location: "North",
+        address: "28 Woodlands Sector 2, Woodlands Connection Building, Singapore 737686",
+        happyHourStart: "15:00",
+        happyHourEnd: "19:00",
+        drinks: ["beers"], 
+        priceRange: {
+            min: 5,
+            max: 13
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.thecarpentersbar.com.sg/", 
+    },
+    {
+        name: "O/T Bar",
+        location: "North",
+        address: "6 Woodlands Square, #01-02 Woods Square, Singapore 737737",
+        happyHourStart: "15:00",
+        happyHourEnd: "19:00",
+        drinks: ["cocktails", "wines", "spirits"], 
+        priceRange: {
+            min: 12,
+            max: 16
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.tipsycollective.com/otbar", 
+    },
+    {
+        name: "Lazy Sloth & Drunken Sloth",
+        location: "East",
+        address: "41 East Coast Road, Singapore 428761",
+        happyHourStart: "14:45",
+        happyHourEnd: "21:00",
+        drinks: ["beers", "cocktails", "wines"], 
+        priceRange: {
+            min: 10,
+            max: 11
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://lazysloth.getz.co/", 
+    },
+    {
+        name: "60ml",
+        location: "East",
+        address: "51 Joo Chiat Place, Singapore 427775",
+        happyHourStart: "17:30",
+        happyHourEnd: "19:30",
+        drinks: ["cocktails"], 
+        priceRange: {
+            min: 14,
+            max: 14
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.asadorsingapore.com/", 
+    },
+    
 ];
 
 // Display Function with enhanced card design and clickable links
