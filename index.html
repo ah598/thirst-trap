@@ -33,6 +33,12 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
+            <!-- Add hamburger menu button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            
+            <!-- Navigation links -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -187,6 +193,44 @@
                 </div>
             </section>
 
+            <!-- Add this after the filter section and before the bars section -->
+            <section class="container mb-4">
+                <div class="row">
+                    <!-- Search Bar -->
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white search-icon" id="searchIcon">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" 
+                                   id="searchBar" 
+                                   class="form-control" 
+                                   placeholder="Search for specific bars or locations, e.g. Holland Village..."
+                                   aria-label="Search"
+                                   aria-describedby="searchIcon">
+                        </div>
+                    </div>
+                    
+                    <!-- Sort Dropdown -->
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white">
+                                <i class="bi bi-sort-down"></i>
+                            </span>
+                            <select id="sortSelect" class="form-select">
+                                <option value="">Sort by...</option>
+                                <option value="nameAsc">Name (A-Z)</option>
+                                <option value="nameDesc">Name (Z-A)</option>
+                                <option value="priceAsc">Price (Low to High)</option>
+                                <option value="priceDesc">Price (High to Low)</option>
+                                <option value="startTime">Earliest Happy Hour Start</option>
+                                <option value="endTime">Latest Happy Hour End</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Bar List Section -->
             <section class="container">
                 <div class="row row-cols-1 row-cols-md-3 g-4" id="bars">
@@ -196,9 +240,29 @@
         </main>
     </div>
 
+    <!-- Footer Section -->
+    <footer class="container-fluid mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <p class="mb-2">
+                                <i class="bi bi-asterisk me-1"></i>
+                                Estimated prices are generally before GST and service charges.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
+
+    
 </body>
 </html>

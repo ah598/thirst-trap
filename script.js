@@ -12,6 +12,12 @@ function capitalizeEachWord(str) {
     return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
 }
 
+// Helper function to convert time to minutes for comparison
+function timeToMinutes(time) {
+    const [hours, minutes] = time.split(':').map(Number);
+    return hours * 60 + minutes;
+}
+
 // Bar Data
 const barsData = [
     {
@@ -350,7 +356,160 @@ const barsData = [
         days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday", "Sunday"],
         url: "https://www.walawala.sg/", 
     },
-    
+    {
+        name: "KPO",
+        location: "Central",
+        address: "1 Killiney Road, Singapore 239518",
+        happyHourStart: "14:00",
+        happyHourEnd: "20:00",
+        drinks: ["beers", "wines","spirits", "cocktails"], 
+        priceRange: {
+            min: 10,
+            max: 20
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        url: "https://kpo.com.sg/", 
+    },
+    {
+        name: "Chimichanga Holland Village",
+        location: "West",
+        address: "3 Lor Liput, #01-01 Holland Piazza, Singapore 277725",
+        happyHourStart: "11:00",
+        happyHourEnd: "19:00",
+        drinks: ["beers", "wines","spirits", "cocktails"], 
+        priceRange: {
+            min: 10,
+            max: 17
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        url: "https://www.chimichanga.sg/", 
+    },
+    {
+        name: "Tango's Restaurant & Wine Bar",
+        location: "West",
+        address: "35 Lorong Mambong, Holland Village, Singapore, SGingapore 277692",
+        happyHourStart: "15:00",
+        happyHourEnd: "21:00",
+        drinks: ["beers", "wines","spirits", "cocktails"], 
+        priceRange: {
+            min: 9,
+            max: 20
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        url: "https://tangosrestaurantsg.wixsite.com/tango-s-restaurant/", 
+    },
+    {
+        name: "La Nonna",
+        location: "West",
+        address: "26/26B Lorong Mambong, Holland Village, Singapore 277685",
+        happyHourStart: "17:30",
+        happyHourEnd: "20:00",
+        drinks: ["beers", "wines"], 
+        priceRange: {
+            min: 6,
+            max: 10
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://lanonna.sg/", 
+    },
+    {
+        name: "The Jolly Roger",
+        location: "West",
+        address: "15 Chu Lin Road, Singapore 669907",
+        happyHourStart: "16:00",
+        happyHourEnd: "20:00",
+        drinks: ["beers", "spirits"], 
+        priceRange: {
+            min: 10,
+            max: 17
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.thejollyroger.org/", 
+    },
+    {
+        name: "Mels' Place",
+        location: "East",
+        address: "2A Kuo Chuan Avenue, Singapore 426897",
+        happyHourStart: "16:00",
+        happyHourEnd: "19:00",
+        drinks: ["beers", "spirits"], 
+        priceRange: {
+            min: 8,
+            max: 12
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://melsplace.com.sg/", 
+    },
+    {
+        name: "Pigsfly Kitchen & Bar",
+        location: "East",
+        address: "19 East Coast Road, #01-03, Singapore 428746",
+        happyHourStart: "16:00",
+        happyHourEnd: "19:00",
+        drinks: ["beers", "spirits"], 
+        priceRange: {
+            min: 8,
+            max: 12
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.hiddendoorconcepts.com/pigsfly", 
+    },
+    {
+        name: "Prive @ Keppel Bay",
+        location: "South",
+        address: "2 Keppel Bay Vista, #01-03 Marina at Keppel Bay, Singapore 098382",
+        happyHourStart: "16:00",
+        happyHourEnd: "20:00",
+        drinks: ["beers", "wines", "spirits", "cocktails"], 
+        priceRange: {
+            min: 7,
+            max: 14.50
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.theprivegroup.com.sg/prive-keppel-bay", 
+    },
+    {
+        name: "Hopscotch (Gillman Barracks)",
+        location: "South",
+        address: "45 Malan Road, Singapore 109455",
+        happyHourStart: "17:00",
+        happyHourEnd: "20:00",
+        drinks: ["beers", "wines", "spirits", "cocktails"], 
+        priceRange: {
+            min: 8,
+            max: 18
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.hopscotch.sg/", 
+    },
+    {
+        name: "Back St. Alley",
+        location: "South",
+        address: "31 Biopolis Way, #01-06, Singapore 138669",
+        happyHourStart: "16:30",
+        happyHourEnd: "20:00",
+        drinks: ["beers", "wines", "spirits"], 
+        priceRange: {
+            min: 10,
+            max: 12
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "http://backstreetalley.sg/", 
+    },
+    {
+        name: "Ob.bar",
+        location: "South",
+        address: "9 N Buona Vista Dr, #01-04 The Metropolis, Singapore 138588",
+        happyHourStart: "16:00",
+        happyHourEnd: "18:00",
+        drinks: ["beers", "wines"], 
+        priceRange: {
+            min: 6.25,
+            max: 6.75
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        url: "https://obbar.social/", 
+    },
 ];
 
 // Display Function with enhanced card design and clickable links
@@ -457,100 +616,242 @@ document.addEventListener('DOMContentLoaded', function() {
     maxSlider.addEventListener('input', handleSliderChange);
 });
 
-// Filter Button Event Listener
-document.getElementById("filterButton").addEventListener("click", function() {
-    const locationFilter = document.getElementById("location").value;
-    const startTimeFilter = document.getElementById("startTime").value;
-    const endTimeFilter = document.getElementById("endTime").value;
-    const drinkFilter = document.getElementById("drink").value;
-    const minPrice = parseInt(document.getElementById("priceMin").value);
-    const maxPrice = parseInt(document.getElementById("priceMax").value);
+// Search and Sort Functions
+let currentBars = [...barsData]; // Keep track of currently displayed bars
+
+// Search function
+function searchBars(searchTerm) {
+    searchTerm = searchTerm.toLowerCase();
+    return barsData.filter(bar => {
+        return (
+            bar.name.toLowerCase().includes(searchTerm) ||
+            bar.location.toLowerCase().includes(searchTerm) ||
+            bar.address.toLowerCase().includes(searchTerm) ||
+            bar.drinks.some(drink => drink.toLowerCase().includes(searchTerm))
+        );
+    });
+}
+
+// Sort function
+function sortBars(bars, sortType) {
+    const sortedBars = [...bars];
     
-    const daysFilter = Array.from(document.querySelectorAll(".day:checked")).map(checkbox => checkbox.value);
+    switch(sortType) {
+        case 'nameAsc':
+            sortedBars.sort((a, b) => a.name.localeCompare(b.name));
+            break;
+            
+        case 'nameDesc':
+            sortedBars.sort((a, b) => b.name.localeCompare(a.name));
+            break;
+            
+        case 'priceAsc':
+            sortedBars.sort((a, b) => {
+                // Sort by minimum price, then by maximum price if minimums are equal
+                if (a.priceRange.min === b.priceRange.min) {
+                    return a.priceRange.max - b.priceRange.max;
+                }
+                return a.priceRange.min - b.priceRange.min;
+            });
+            break;
+            
+        case 'priceDesc':
+            sortedBars.sort((a, b) => {
+                // Sort by maximum price, then by minimum price if maximums are equal
+                if (b.priceRange.max === a.priceRange.max) {
+                    return b.priceRange.min - a.priceRange.min;
+                }
+                return b.priceRange.max - a.priceRange.max;
+            });
+            break;
+            
+        case 'startTime':
+            sortedBars.sort((a, b) => {
+                const aMinutes = timeToMinutes(a.happyHourStart);
+                const bMinutes = timeToMinutes(b.happyHourStart);
+                return aMinutes - bMinutes;
+            });
+            break;
+            
+        case 'endTime':
+            sortedBars.sort((a, b) => {
+                const aMinutes = timeToMinutes(a.happyHourEnd);
+                const bMinutes = timeToMinutes(b.happyHourEnd);
+                return bMinutes - aMinutes; // Reverse order for latest end time
+            });
+            break;
+            
+        default:
+            return sortedBars;
+    }
+    return sortedBars;
+}
 
-    let filteredBars = barsData.filter(bar => {
-        let showBar = true;
+// Event Listeners
+document.addEventListener('DOMContentLoaded', function() {
+    const searchBar = document.getElementById('searchBar');
+    const searchIcon = document.getElementById('searchIcon');
+    const sortSelect = document.getElementById('sortSelect');
 
-        // Location filter
-        if (locationFilter && bar.location.toLowerCase() !== locationFilter.toLowerCase()) {
-            showBar = false;
+    // Function to trigger search icon effect
+    function triggerSearchEffect() {
+        searchIcon.classList.add('active', 'pulse');
+        
+        // Remove pulse after animation
+        setTimeout(() => {
+            searchIcon.classList.remove('pulse');
+        }, 300);
+    }
+
+    // Function to reset search icon
+    function resetSearchIcon() {
+        searchIcon.classList.remove('active', 'pulse');
+    }
+
+    // Search input event listener
+    searchBar.addEventListener('input', function(e) {
+        const searchTerm = e.target.value;
+        
+        if (searchTerm.length > 0) {
+            searchIcon.classList.add('active');
+        } else {
+            resetSearchIcon();
         }
+        
+        currentBars = searchBars(searchTerm);
+        if (sortSelect.value) {
+            currentBars = sortBars(currentBars, sortSelect.value);
+        }
+        displayBars(currentBars);
+    });
 
-        // Time filters
-        if (startTimeFilter || endTimeFilter) {
-            const getMinutes = (timeStr) => {
-                const [hours, minutes] = timeStr.split(':').map(Number);
-                return hours * 60 + minutes;
-            };
+    // Enter key event listener
+    searchBar.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            triggerSearchEffect();
+        }
+    });
 
-            const barStartMins = getMinutes(bar.happyHourStart);
-            const barEndMins = getMinutes(bar.happyHourEnd);
+    // Click event for search icon
+    searchIcon.addEventListener('click', function() {
+        if (searchBar.value.length > 0) {
+            triggerSearchEffect();
+        }
+    });
 
-            if (startTimeFilter) {
-                const filterStartMins = getMinutes(startTimeFilter);
-                if (barStartMins > filterStartMins) {
+    // Sort event listener
+    sortSelect.addEventListener('change', function(e) {
+        const sortType = e.target.value;
+        currentBars = sortBars(currentBars, sortType);
+        displayBars(currentBars);
+    });
+
+    // Update filter button to work with search and sort
+    document.getElementById("filterButton").addEventListener("click", function() {
+        const locationFilter = document.getElementById("location").value;
+        const startTimeFilter = document.getElementById("startTime").value;
+        const endTimeFilter = document.getElementById("endTime").value;
+        const drinkFilter = document.getElementById("drink").value;
+        const minPrice = parseInt(document.getElementById("priceMin").value);
+        const maxPrice = parseInt(document.getElementById("priceMax").value);
+        
+        const daysFilter = Array.from(document.querySelectorAll(".day:checked")).map(checkbox => checkbox.value);
+
+        let filteredBars = barsData.filter(bar => {
+            let showBar = true;
+
+            // Location filter
+            if (locationFilter && bar.location.toLowerCase() !== locationFilter.toLowerCase()) {
+                showBar = false;
+            }
+
+            // Time filters
+            if (startTimeFilter || endTimeFilter) {
+                const getMinutes = (timeStr) => {
+                    const [hours, minutes] = timeStr.split(':').map(Number);
+                    return hours * 60 + minutes;
+                };
+
+                const barStartMins = getMinutes(bar.happyHourStart);
+                const barEndMins = getMinutes(bar.happyHourEnd);
+
+                if (startTimeFilter) {
+                    const filterStartMins = getMinutes(startTimeFilter);
+                    if (barStartMins > filterStartMins) {
+                        showBar = false;
+                    }
+                }
+
+                if (endTimeFilter) {
+                    const filterEndMins = getMinutes(endTimeFilter);
+                    if (barEndMins < filterEndMins) {
+                        showBar = false;
+                    }
+                }
+            }
+
+            // Drink filter
+            if (drinkFilter && !bar.drinks.includes(drinkFilter.toLowerCase())) {
+                showBar = false;
+            }
+
+            // Price range filter
+            if (minPrice && maxPrice) {
+                if (bar.priceRange.max < minPrice || bar.priceRange.min > maxPrice) {
                     showBar = false;
                 }
             }
 
-            if (endTimeFilter) {
-                const filterEndMins = getMinutes(endTimeFilter);
-                if (barEndMins < filterEndMins) {
+            // Days filter
+            if (daysFilter.length > 0) {
+                let daysMatch = daysFilter.every(selectedDay => bar.days.includes(selectedDay));
+                if (!daysMatch) {
                     showBar = false;
                 }
             }
-        }
 
-        // Drink filter
-        if (drinkFilter && !bar.drinks.includes(drinkFilter.toLowerCase())) {
-            showBar = false;
-        }
+            return showBar;
+        });
 
-        // Price range filter
-        if (minPrice && maxPrice) {
-            if (bar.priceRange.max < minPrice || bar.priceRange.min > maxPrice) {
-                showBar = false;
-            }
+        currentBars = filteredBars; // Update currentBars after filtering
+        
+        // Maintain current sort
+        if (sortSelect.value) {
+            currentBars = sortBars(currentBars, sortSelect.value);
         }
-
-        // Days filter
-        if (daysFilter.length > 0) {
-            let daysMatch = daysFilter.every(selectedDay => bar.days.includes(selectedDay));
-            if (!daysMatch) {
-                showBar = false;
-            }
-        }
-
-        return showBar;
+        
+        displayBars(currentBars);
     });
 
-    displayBars(filteredBars);
-});
+    // Update reset button to also reset search icon
+    document.getElementById("resetButton").addEventListener("click", function() {
+        // Reset dropdowns
+        document.getElementById("location").value = "";
+        document.getElementById("startTime").value = "";
+        document.getElementById("endTime").value = "";
+        document.getElementById("drink").value = "";
+        
+        // Reset price range sliders
+        document.getElementById("priceMin").value = 5;
+        document.getElementById("priceMax").value = 30;
+        document.getElementById("minPrice").textContent = "$5";
+        document.getElementById("maxPrice").textContent = "$30";
 
-// Reset Button Event Listener
-document.getElementById("resetButton").addEventListener("click", function() {
-    // Reset dropdowns
-    document.getElementById("location").value = "";
-    document.getElementById("startTime").value = "";
-    document.getElementById("endTime").value = "";
-    document.getElementById("drink").value = "";
-    
-    // Reset price range sliders
-    document.getElementById("priceMin").value = 5;
-    document.getElementById("priceMax").value = 30;
-    document.getElementById("minPrice").textContent = "$5";
-    document.getElementById("maxPrice").textContent = "$30";
+        // Reset checkboxes
+        document.querySelectorAll(".day").forEach(dayCheckbox => {
+            dayCheckbox.checked = false;
+        });
 
-    // Reset checkboxes
-    document.querySelectorAll(".day").forEach(dayCheckbox => {
-        dayCheckbox.checked = false;
+        searchBar.value = '';
+        resetSearchIcon();
+        sortSelect.value = '';
+        currentBars = [...barsData];
+        displayBars(currentBars);
     });
-
-    // Display all bars
-    displayBars(barsData);
 });
-
 // Initial display of all bars
 window.onload = function() {
     displayBars(barsData);
 };
+
