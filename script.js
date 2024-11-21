@@ -594,7 +594,90 @@ const barsData = [
         days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         url: "https://www.asadorsingapore.com/", 
     },
-    
+    {
+        name: "Parliament Bar",
+        location: "Central",
+        address: "18 Teck Lim Road, #02-01, Singapore 088390",
+        happyHourStart: "17:00",
+        happyHourEnd: "20:00",
+        drinks: ["cocktails", "spirits"], 
+        priceRange: {
+            min: 10,
+            max: 15
+        },
+        days: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        url: "https://www.parliamentbar.sg/", 
+    },
+    {
+        name: "Humpback",
+        location: "Central",
+        address: "18-20 Bukit Pasoh Road, Singapore 089834",
+        happyHourStart: "17:00",
+        happyHourEnd: "19:00",
+        drinks: ["cocktails","beer", "wines"], 
+        priceRange: {
+            min: 15,
+            max: 15
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.humpback.sg/", 
+    },
+    {
+        name: "The Elephant Room",
+        location: "Central",
+        address: "33 Tanjong Road, #01-02, Singapore 088456",
+        happyHourStart: "17:00",
+        happyHourEnd: "19:00",
+        drinks: ["cocktails"], 
+        priceRange: {
+            min: 15,
+            max: 15
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.humpback.sg/", 
+    },
+    {
+        name: "Salud",
+        location: "Central",
+        address: "19 Keong Saik Road, Singapore 089126",
+        happyHourStart: "18:00",
+        happyHourEnd: "22:00",
+        drinks: ["cocktails"], 
+        priceRange: {
+            min: 15,
+            max: 15
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        url: "https://www.instagram.com/salud.singapore/",
+    }, 
+    {
+        name: "OPIO Kitchen & Bar",
+        location: "South",
+        address: "991B Alexandra Road, Singapore 119970",
+        happyHourStart: "15:00",
+        happyHourEnd: "20:00",
+        drinks: ["wines", "spirits", "beers"], 
+        priceRange: {
+            min: 10,
+            max: 12
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        url: "https://www.bluelotus.com.sg/opio-kitchen-bar",
+    }, 
+    {
+        name: "Jag's @ Siglap",
+        location: "East",
+        address: "922 East Coast Road, Singapore 459114",
+        happyHourStart: "15:00",
+        happyHourEnd: "20:00",
+        drinks: ["beers"], 
+        priceRange: {
+            min: 10,
+            max: 12
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://jags.com.sg/",
+    }, 
 ];
 
 // Display Function with enhanced card design and clickable links

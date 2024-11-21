@@ -603,3 +603,119 @@ footer p {
 footer .small {
     font-size: 0.875rem;
 }
+
+/* Hero Section Styles */
+.hero-section {
+    padding: 4rem 0;
+    background-color: var(--custom-bg);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.hero-logo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Update media queries for hero section */
+@media (max-width: 991px) {
+    .hero-section {
+        min-height: auto;
+        padding: 3rem 0;
+    }
+    
+    .hero-logo {
+        max-width: 400px;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        text-align: center;
+        padding: 2rem 0;
+    }
+    
+    .hero-logo {
+        max-width: 300px;
+        margin-top: 2rem;
+    }
+}
+
+/* Button Styles */
+.btn-custom-primary.btn-lg {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-family: 'Forum', serif;
+    background-color: var(--custom-primary);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-primary.btn-lg:hover {
+    background-color: var(--custom-secondary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Feature Cards Update */
+.feature-card {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background-color: var(--custom-card-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 2px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--custom-secondary);
+    box-shadow: var(--shadow-lg);
+    background-color: var(--hover-bg);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--custom-primary);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover i {
+    color: var(--custom-secondary);
+    transform: scale(1.1);
+}
+
+.feature-card h3 {
+    font-family: 'Forum', serif;
+    color: var(--custom-primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Footer Update */
+.hero-section footer {
+    background-color: var(--custom-bg);
+    color: var(--custom-primary);
+    font-family: 'Forum', serif;
+}
