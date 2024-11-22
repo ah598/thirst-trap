@@ -678,6 +678,48 @@ const barsData = [
         days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         url: "https://jags.com.sg/",
     }, 
+    {
+        name: "georges MADBar & Grill",
+        location: "East",
+        address: "687 East Coast Road, Frankel Ave, Singapore 459055",
+        happyHourStart: "15:00",
+        happyHourEnd: "20:00",
+        drinks: ["beers", "wines", "cocktails", "spirits"], 
+        priceRange: {
+            min: 8,
+            max: 20
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        url: "https://ccpl.ninjaos.com/media/ckfinder/files/SP%20Main%20Menu%20V06052024-compressed.pdf",
+    },
+    {
+        name: "georges MADBar & Grill",
+        location: "East",
+        address: "687 East Coast Road, Frankel Ave, Singapore 459055",
+        happyHourStart: "15:00",
+        happyHourEnd: "20:00",
+        drinks: ["beers", "wines", "cocktails", "spirits"], 
+        priceRange: {
+            min: 8,
+            max: 20
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        url: "https://ccpl.ninjaos.com/media/ckfinder/files/SP%20Main%20Menu%20V06052024-compressed.pdf",
+    },
+    {
+        name: "The Whistle",
+        location: "East",
+        address: "160 Changi Road, #01-08, Singapore 419728",
+        happyHourStart: "17:00",
+        happyHourEnd: "20:30",
+        drinks: ["beers", "wines"], 
+        priceRange: {
+            min: 8,
+            max: 10
+        },
+        days: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://the-whistle.odoo.com/",
+    },
 ];
 
 // Display Function with enhanced card design and clickable links
