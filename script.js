@@ -720,6 +720,76 @@ const barsData = [
         days: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         url: "https://the-whistle.odoo.com/",
     },
+    {
+        name: "Chupitos",
+        location: "Central",
+        address: "3E River Valley Road #01-01, The Circuit, Clarke Quay, Singapore 179024",
+        happyHourStart: "17:30",
+        happyHourEnd: "20:00",
+        drinks: ["beers", "wines", "spirits", "cocktails"], 
+        priceRange: {
+            min: 8,
+            max: 8
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://chupitos.sg/",
+    },
+    {
+        name: "1-Arden",
+        location: "Central",
+        address: "88 Market Street, CapitaSpring, Singapore 048948",
+        happyHourStart: "15:00",
+        happyHourEnd: "22:00",
+        drinks: ["beers", "wines", "spirits"], 
+        priceRange: {
+            min: 12,
+            max: 15
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        url: "https://www.1-arden.sg/",
+    },
+    {
+        name: "Takeshisan",
+        location: "West",
+        address: "38 Lorong Mambong, Holland Village, Singapore 277694",
+        happyHourStart: "17:00",
+        happyHourEnd: "19:00",
+        drinks: ["beers"], 
+        priceRange: {
+            min: 12,
+            max: 12
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        url: "https://www.pebble.by/takeshisan",
+    },
+    {
+        name: "Papi's Tacos",
+        location: "Central",
+        address: "33 Tanjong Pagar Road, #01-01, Singapore 088456",
+        happyHourStart: "12:00",
+        happyHourEnd: "19:00",
+        drinks: ["beers", "wines", "cocktails", "spirits"], 
+        priceRange: {
+            min: 10,
+            max: 10
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        url: "https://www.papis-tacos.com/tanjong-pagar-homen",
+    },
+    {
+        name: "Kinki",
+        location: "Central",
+        address: "70 Collyer Quay, #02-02 Customs House, Singapore 049323",
+        happyHourStart: "12:00",
+        happyHourEnd: "20:00",
+        drinks: ["beers", "wines", "cocktails", "spirits"], 
+        priceRange: {
+            min: 11.50,
+            max: 18
+        },
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        url: "https://www.kinki.com.sg/menu-rooftop-bar",
+    },
 ];
 
 // Display Function with enhanced card design and clickable links
